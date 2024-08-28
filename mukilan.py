@@ -1,13 +1,17 @@
 import streamlit as st
 import numpy as np
-import joblib
+import pickle
+
 # Correct file paths
 model_path = 'model.pkl'
 scaler_path = 'muksclr.pkl'
 
 # Load the model and scaler
-model = joblib.load(model_path)
-scaler = joblib.load(scaler_path)
+with open(model_path, 'rb') as model_file:
+    model = pickle.load(model_file)
+
+with open(scaler_path, 'rb') as scaler_file:
+    scaler = pickle.load(scaler_file)
 
 def predict(features):
     features = np.array([features])

@@ -1,14 +1,13 @@
 import streamlit as st
 import numpy as np
-import tensorflow as tf
 import joblib
 
 # Correct file paths
-model_path ='model.h5'
+model_path = 'model.pkl'
 scaler_path = 'muksclr.pkl'
 
 # Load the model and scaler
-model = tf.keras.models.load_model(model_path)
+model = joblib.load(model_path)
 scaler = joblib.load(scaler_path)
 
 def predict(features):

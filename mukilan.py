@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 
 # Correct file paths
-model_path = 'model.h5'
+model_path = 'model.pkl'
 scaler_path = 'muksclr.pkl'
 
 # Load the model and scaler

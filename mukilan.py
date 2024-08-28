@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 import joblib
-
 # Correct file paths
 model_path = 'model.pkl'
 scaler_path = 'muksclr.pkl'
